@@ -29,6 +29,10 @@ Return
     }
 Return
 
+#S::
+    Send, ^s
+Return
+
 ; Paste history with Ctrl + Win + V
 ^#V::
     Send, #v
@@ -38,7 +42,9 @@ Return
 LWin::
     If ProcessExist("PowerLauncher.exe"){
         Send, ^!{Space} ; Settings in Powertoys
+    } Else If FileExist("C:\Program Files\PowerToys\modules\launcher\PowerLauncher.exe") {
+        Run, C:\Program Files\PowerToys\modules\launcher\PowerLauncher.exe
     } Else {
-        Send, {LWin}
+        Send, LWin
     }
 Return
