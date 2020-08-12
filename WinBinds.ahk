@@ -11,6 +11,10 @@ Return
     Send, !{F4}
 Return
 
+; No Win + Space
+#Space::
+Return
+
 ; Copy with Win + C
 #C::
     If WinActive("ahk_class ConsoleWindowClass") Or WinActive("ahk_exe WindowsTerminal.exe") {
