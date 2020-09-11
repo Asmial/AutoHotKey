@@ -44,9 +44,8 @@ Return
 
 ; Open PowerLauncher
 LWin::
-    If ProcessExist("PowerLauncher.exe"){
-        Send, ^{F12} ; Settings in Powertoys
-    } Else {
+    Send, ^{F12} ; Settings in Powertoys
+    If !ProcessExist("PowerLauncher.exe"){
         Send, {LWin}
     }
 Return
